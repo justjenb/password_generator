@@ -16,11 +16,34 @@
 
 // Assignment code here
 
-const uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const lowercaseLetters = uppercaseLetters.toLowerCase();
-const numbers = "1234567890";
-const specialCharacters = "!#$%&()*+,-./:;<=>?@[\]^_`{|}~";
-const charMinMaxResult = 
+const uppercaseLetters = document.querySelector("#uppercase");
+// "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const lowercaseLetters = document.querySelector("#lowercase");
+// uppercaseLetters.toLowerCase();
+const numbers = document.querySelector("#numbers");
+// "1234567890";
+const specialCharacters = document.querySelector("#special");
+// "!#$%&()*+,-./:;<=>?@[\]^_`{|}~";
+const pwMinMaxBar = document.querySelector("#pwminmaxbar");
+// "8", "132" / range
+const pwLength = document.querySelector("#pwlenthresultbox");
+// Selected
+const passwordText = document.querySelector("#password");
+// final password 
+
+pwMinMaxBar.addEventListener("change", (event) => {
+  pwLength.innerText = event.target.value;
+});
+
+function getRandomUppercase() {
+  const upperL = "!@#$%^&*()[]=<>.";
+  return symbols[Math.floor(Math.random() * symbols.length)];
+}
+
+function getRandomSymbols {
+  const symbols = "!#$%&()*+,-./:;<=>?@[\]^_`{|}~";
+  return symbols[Math.floor(Math.random() * symbols.length)];
+}
 
 console.log(uppercaseLetters);
 console.log(lowercaseLetters);
@@ -30,7 +53,6 @@ console.log(specialCharacters);
 function generatePassword() {
 
 }
-
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");

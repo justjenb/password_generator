@@ -4,4 +4,6 @@ Random password tutorial help credit goes to [dev.to](https://dev.to/code_myster
 
 Min max slider tutorial credit goes to [Foolish Developer](https://foolishdeveloper.com/how-to-create-javascript-range-slider-with-min-and-max/)
 
+Additional tutorial help for both items to [Andy Leverenz](https://webdesign.tutsplus.com/tutorials/build-a-configurable-random-password-generator-with-javascript--cms-93262)
+
 
