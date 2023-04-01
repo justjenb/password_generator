@@ -17,7 +17,7 @@
     <div class="card">
       <div class="card-header">
         <h2>Generate a Password</h2>
-        <div class="card-options">
+        <section class="card-options">
           <p>Options:</p>
           <div class="option">
             <input type="checkbox" data-id="uppercase" />
@@ -35,14 +35,21 @@
             <input type="checkbox" data-id="special" />
             <label for="special">Include symbols</label>
           </div>
-        </div>
+          <div class="option">
+            <label id="pwdlengthlabel" for="pwlength">Password length (8-132)</label>
+            <div class="option" id="pwlengthbar">
+            <input type="range" min="8" max="132" step="1" data-id="pwlength" />
+            <span id="pwlenthresultbox" id="pwlengthresult">16</span>
+          </div>
+          </div>
+        </section>
       </div>
       <div class="card-body">
         <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
       </div>
       <div class="card-footer">
-        <button id="generate" class="btn" onclick="generatePassword()">Generate Password</button>
-        <button id="copy" class="btn" onclick="copyPassword()">Copy Password</button>
+        <button id="generate-btn" class="btn" onclick="generatePassword()">Generate Password</button>
+        <button id="copy-btn" class="btn" onclick="copyPassword()">Copy Password</button>
       </div>
     </div>
   </div>
