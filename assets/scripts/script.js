@@ -87,7 +87,10 @@ function promptPwConfigInput() {
 function generatePassword(options) {
   let finalPassword = "";
 
-  // converting characters from unicode using String.fromCharCode
+  // converting characters from unicode using String.fromCharCode and Math.random to pull a 
+  // random letter, or number, based on the number of letters or numbers to choose from and 
+  // starting at the unicode point for those character sets
+  // symbols are just pulled randomly from the string of characters using math.random
   const getRandomUpper = () =>
     String.fromCharCode(Math.floor(Math.random() * 26) + 65);
   const getRandomLower = () =>
