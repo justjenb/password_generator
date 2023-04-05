@@ -108,6 +108,7 @@ function generatePassword(options) {
   if (options.useSymbols) selectedOptions.push(getRandomSymbol);
 
   // shuffles the initial selectedOptions array of characters, or they would come out in the same order each time
+  // I did not use crypto.getRandomValues for this because there are only a max of four options and min of two, it just needs to be somewhat random
   shuffleArray(selectedOptions);
 
   // ensures that for each of the true selected options it gets added to the finalPassword, e.g. if upper, numbers,
@@ -117,6 +118,7 @@ function generatePassword(options) {
   }
 
   // iterates through all of the selected options and randomly chooses one to add to the end of the finalPassword until the length of the password is reached
+  // uses crypto.getRandomValues for more secure password generation than Math.random
   for (let i = selectedOptions.length; i < passwordLength; i++) {
     const randomFunc =
       selectedOptions[
