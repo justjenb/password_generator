@@ -18,29 +18,20 @@
       <div class="card-header">
         <h2>Generate a Password</h2>
         <section class="card-options">
-          <p>Options:</p>
           <div class="option">
-            <input type="checkbox" id="uppercase" />
-            <label for="uppercase">Include uppercase</label>
+            <input type="hidden" id="uppercase" checked>
           </div>
           <div class="option">
-            <input type="checkbox" id="lowercase" />
-            <label for="lowercase">Include lowercase</label>
+            <input type="hidden" id="lowercase" checked>
           </div>
           <div class="option">
-            <input type="checkbox" id="numbers" />
-            <label for="numbers">Include numbers</label>
+            <input type="hidden" id="numberbox" checked>
           </div>
           <div class="option">
-            <input type="checkbox" id="special" />
-            <label for="special">Include symbols</label>
+            <input type="hidden" id="special" checked>
           </div>
-          <div class="option">
-            <label id="pwdlengthlabel" for="pwlength">Password length (8-132)</label>
             <div class="option" id="pwlengthbar">
-            <input type="range" min="8" max="132" step="1" id="pwminmaxbar" />
-            <span id="pwlenthresultbox" id="pwlengthresult">16</span>
-          </div>
+            <input type="hidden" min="8" max="128" step="1" id="pwlengthslider" />
           </div>
         </section>
       </div>
@@ -49,10 +40,11 @@
       </div>
       <div class="card-footer">
         <button id="generate-btn" class="btn" onclick="generatePassword()">Generate Password</button>
-        <button id="copy-btn" class="btn" onclick="copyPassword()">Copy Password</button>
+        <button id="copy-btn" class="btn fas fa-copy" onclick="copyPassword()"></button>
       </div>
     </div>
   </div>
+  <script src="https://kit.fontawesome.com/c8c696bf68.js" crossorigin="anonymous"></script>
   <script src="./assets/scripts/script.js"></script>
 </body>
 

@@ -43,32 +43,33 @@ header {
 }
 
 .card-header {
-  display: flex;
-  flex-wrap: wrap;
+  display: block;
   flex-shrink: 1;
   max-width: 100%;
+  max-height: 100px;
+}
+
+.card-header h2 {
+  text-align: center;
 }
 
 .card-options {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   width: 50%;
   border-radius: 5px;
+  visibility: hidden;
 }
 
 .card-options p {
   height: 100%;
   margin-top: 0;
+  visibility: hidden;
 }
 
 .option {
   padding: 5px 5px 5px 5px;
-}
-
-.card-header h2 {
-  width: 50%;
-  height: 100%;
+  visibility: hidden;
 }
 
 .card-header input {
@@ -175,7 +176,6 @@ button[disabled] {
   }
 
   .card-header h2 {
-    width: 40%;
     height: 100%;
   }
 }
@@ -199,9 +199,9 @@ button[disabled] {
     height: 100%;
     text-align: center;
   }
-  
+
   .card-options,
-  .option,  
+  .option,
   #pwlenthresultbox,
   #pwlengthbar {
     display: flex;
@@ -213,6 +213,6 @@ button[disabled] {
 
   #pwdlengthlabel {
     width: 100%;
-display:block;  }
-
+    display: block;
+  }
 }
