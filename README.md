@@ -34,9 +34,9 @@ No installation required, but if you want to run this locally:
 
 ## Preview
 
-[Link to site](https://justjenb.github.io/portfolio/)
+[Link to site](https://justjenb.github.io/password_generator/)
 
-![Screenshot of password generator](./assets/images/screenshot.png)
+![Screenshot of password generator](./assets/img/pgen.png)
 
 ## Credits
 

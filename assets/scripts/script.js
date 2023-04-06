@@ -27,7 +27,7 @@ let useNumbers;
 let useSymbols;
 let passwordLength;
 
-// basic function to shuffle an array
+// basic function to shuffle an array (thank you W3Schools)
 function shuffleArray(array) {
   array.sort(() => Math.random() - 0.5);
 }
@@ -112,7 +112,7 @@ function generatePassword(options) {
   shuffleArray(selectedOptions);
 
   // ensures that for each of the true selected options it gets added to the finalPassword, e.g. if upper, numbers,
-  // symbols were selected, only upper and numbers may come out if this were not configured
+  // symbols were selected, only upper and numbers may come out if this were not configured due to the random chance that symbols may never be randomly selected
   for (const option of selectedOptions) {
     finalPassword += option();
   }
